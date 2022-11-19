@@ -1,0 +1,10 @@
+{
+  "/api-data": {
+    "target": "http://localhost:3001",
+    "secure": false
+  },
+  "/api-filter-api": {
+    "target": "http://localhost:3002",
+    "secure": false
+  }
+}
