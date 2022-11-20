@@ -6,7 +6,7 @@ Nx monorepo with react based micro-frontend applications with express API
 
 * [:zap: Nx micro-frontend example with react and express](#zap-nx-micro-frontend-example-with-react-and-express)
   * [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
-  * [:books: General info](#books-general-info)
+  * [:books: List of services](#books-list-of-services)
   * [:camera: Screenshots](#camera-screenshots)
   * [:signal_strength: Technologies](#signal_strength-technologies)
   * [:floppy_disk: Setup](#floppy_disk-setup)
@@ -16,9 +16,13 @@ Nx monorepo with react based micro-frontend applications with express API
   * [:file_folder: License](#file_folder-license)
   * [:envelope: Contact](#envelope-contact)
 
-## :books: General info
+## :books: List of services
 
-* **Note:** to be able to generate new react app, @nrwl/react and @nrwl/workspace must have the same version
+* API Data: The backend service stores some data, and can return them on request.
+* API Filter: The backend of this service can provide filters for the data API
+* Frontend Data: The front-end of this service is responsible for displaying all information regarding the data. Selection criteria will be communicated from another service.
+* Frontend Filter: Provides a select to load and present the data
+* Shell: This is the host service which contains the Data and Filter frontends
 
 ## :camera: Screenshots
 
@@ -29,7 +33,7 @@ Nx monorepo with react based micro-frontend applications with express API
 * [Nx](https://nx.dev) Build framework used to create project workspace
 * [React](https://reactjs.org/)  A JavaScript library for building user interfaces
 * [Express](https://expressjs.com/) Express is a minimal and flexible Node.js web application framework
-* [nanostores](https://github.com/nanostores/nanostores) State manager for React/RN/Preact/Vue/Svelte with many atomic tree-shakable stores
+* [Nanostores](https://github.com/nanostores/nanostores) State manager for React/RN/Preact/Vue/Svelte with many atomic tree-shakable stores
 * [Cypress](https://www.cypress.io/) E2E testing framework
 
 ## :floppy_disk: Setup
