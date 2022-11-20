@@ -17,15 +17,15 @@ const app = express();
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 app.use(cors());
 
-app.get('/api/user-data', (req, res) => {
-  const user = req.query.user;
+app.get('/api/employee-data', (req, res) => {
+  const employee = req.query.employee;
   let responseBody: Partial<Employee> = {};
 
-  if (user === 'bob-smith') {
+  if (employee === 'bob-smith') {
     responseBody = bobSmithResponse;
   }
 
-  if (user === 'gael-smithy') {
+  if (employee === 'gael-smithy') {
     responseBody = gaelSmithyResponse;
   }
   res.send(responseBody);
