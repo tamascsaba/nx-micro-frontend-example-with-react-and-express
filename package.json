@@ -5,7 +5,8 @@
   "scripts": {
     "start": "nx run-many --target=serve --projects=shell,api-data,api-filter",
     "build": "nx build",
-    "test": "nx run-many --target=test --projects=*"
+    "test": "nx run-many --target=test --projects=*",
+    "e2e": "nx e2e shell-e2e --configuration=production"
   },
   "private": false,
   "dependencies": {
