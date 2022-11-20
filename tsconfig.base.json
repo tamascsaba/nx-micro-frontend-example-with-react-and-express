@@ -15,9 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-micro-frontend-with-react-and-express/shared-components": [
-        "libs/shared-components/src/index.ts"
-      ]
+      "@lib/shared-components": ["libs/shared-components/src/index.ts"],
+      "@lib/shared-interfaces": ["libs/shared-interfaces/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
