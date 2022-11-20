@@ -1,13 +1,12 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.scss';
+import './app.module.scss';
 
-export function App() {
+import {EmployeeSelect} from '@lib/shared-components';
+
+export default function App() {
   return (
     <>
-      <div>Filter App</div>
-      <div />
+      <h3>Filter Application</h3>
+      <EmployeeSelect />
     </>
   );
 }
-
-export default App;

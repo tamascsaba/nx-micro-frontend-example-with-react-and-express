@@ -1,12 +1,39 @@
+import {useEffect, useState} from 'react';
+
 import styles from './employee-data.module.scss';
+import Spinner from '../spinner/spinner';
 
-/* eslint-disable-next-line */
-export interface EmployeeDataProps {}
+async function getEmployee() {
+  const res = await fetch('http://localhost:3001/api/user-data');
 
-export function EmployeeData(props: EmployeeDataProps) {
+  if (!res.ok) {
+    throw new Error('Failed to fetch data');
+  }
+
+  return res.json();
+}
+
+export function EmployeeData() {
+  const [employee, setEmployee] = useState(null);
+  const [status, setStatus] = useState({error: '', success: false, isLoading: false});
+
+
+  useEffect(() => {
+    const loadData = async () => {
+      setStatus({error: '', success: false, isLoading: true})
+      const data = await getEmployee();
+      setEmployee(data);
+      setStatus({error: '', success: true, isLoading: false});
+    };
+    void loadData();
+  }, []);
+
   return (
     <div className={styles['container']}>
-      <h1>Welcome to EmployeeData!</h1>
+      {status.isLoading && <Spinner/>}
+      <pre>
+        {JSON.stringify(employee, null, 2)}
+      </pre>
     </div>
   );
 }

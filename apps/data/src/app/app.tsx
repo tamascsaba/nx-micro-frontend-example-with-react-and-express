@@ -1,11 +1,10 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.scss';
+import {EmployeeData} from '@lib/shared-components';
 
 export function App() {
   return (
     <>
-      <div>Data App</div>
-      <div />
+      <h3>Data Application</h3>
+      <EmployeeData />
     </>
   );
 }
