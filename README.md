@@ -29,6 +29,7 @@ Nx monorepo with react based micro-frontend applications with express API
 * [Nx](https://nx.dev) Build framework used to create project workspace
 * [React](https://reactjs.org/)  A JavaScript library for building user interfaces
 * [Express](https://expressjs.com/) Express is a minimal and flexible Node.js web application framework
+* [nanostores](https://github.com/nanostores/nanostores) State manager for React/RN/Preact/Vue/Svelte with many atomic tree-shakable stores
 * [Cypress](https://www.cypress.io/) E2E testing framework
 
 ## :floppy_disk: Setup

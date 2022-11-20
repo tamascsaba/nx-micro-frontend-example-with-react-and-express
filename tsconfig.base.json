@@ -16,7 +16,10 @@
     "baseUrl": ".",
     "paths": {
       "@lib/shared-components": ["libs/shared-components/src/index.ts"],
-      "@lib/shared-interfaces": ["libs/shared-interfaces/src/index.ts"]
+      "@lib/shared-interfaces": ["libs/shared-interfaces/src/index.ts"],
+      "@lib/shared-stores": [
+        "libs/shared-stores/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

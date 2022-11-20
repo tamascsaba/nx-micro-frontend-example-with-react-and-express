@@ -1,10 +1,12 @@
 import {useEffect, useState} from 'react';
+import { useStore } from '@nanostores/react';
+import {selectedEmployee} from '@lib/shared-stores';
 
 import styles from './employee-data.module.scss';
 import Spinner from '../spinner/spinner';
 
-async function getEmployee() {
-  const res = await fetch('http://localhost:3001/api/user-data');
+async function getEmployee(name: string) {
+  const res = await fetch('http://localhost:3001/api/employee-data?employee=' + name);
 
   if (!res.ok) {
     throw new Error('Failed to fetch data');
@@ -16,17 +18,17 @@ async function getEmployee() {
 export function EmployeeData() {
   const [employee, setEmployee] = useState(null);
   const [status, setStatus] = useState({error: '', success: false, isLoading: false});
-
+  const $selectedEmployee = useStore(selectedEmployee);
 
   useEffect(() => {
-    const loadData = async () => {
+    (async function() {
       setStatus({error: '', success: false, isLoading: true})
-      const data = await getEmployee();
+      const data = await getEmployee($selectedEmployee);
+
       setEmployee(data);
       setStatus({error: '', success: true, isLoading: false});
-    };
-    void loadData();
-  }, []);
+    })();
+  }, [$selectedEmployee]);
 
   return (
     <div className={styles['container']}>
@@ -37,5 +39,3 @@ export function EmployeeData() {
     </div>
   );
 }
-
-export default EmployeeData;
