@@ -15,11 +15,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@lib/employee-components": ["libs/employee-components/src/index.ts"],
       "@lib/shared-components": ["libs/shared-components/src/index.ts"],
       "@lib/shared-interfaces": ["libs/shared-interfaces/src/index.ts"],
-      "@lib/shared-stores": [
-        "libs/shared-stores/src/index.ts"
-      ]
+      "@lib/shared-stores": ["libs/shared-stores/src/index.ts"],
+      "@lib/employee-interfaces": ["libs/employee-interfaces/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

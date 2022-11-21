@@ -1,12 +1,12 @@
 # :zap: Nx micro-frontend example with react and express
 
-Nx monorepo with react based micro-frontend applications with express API
+An NX monorepo using webpack module federation for developing micro-frontends that can be deployed independently.
 
 ## :page_facing_up: Table of contents
 
 * [:zap: Nx micro-frontend example with react and express](#zap-nx-micro-frontend-example-with-react-and-express)
   * [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
-  * [:books: List of services](#books-list-of-services)
+  * [:books: Code structure](#books-code-structure)
   * [:camera: Screenshots](#camera-screenshots)
   * [:signal_strength: Technologies](#signal_strength-technologies)
   * [:floppy_disk: Setup](#floppy_disk-setup)
@@ -16,13 +16,15 @@ Nx monorepo with react based micro-frontend applications with express API
   * [:file_folder: License](#file_folder-license)
   * [:envelope: Contact](#envelope-contact)
 
-## :books: List of services
+## :books: Code structure
 
-* API Data: The backend service stores some data, and can return them on request.
+* API Data: The backend service stores data (like users or employees), and can return them on request.
 * API Filter: The backend of this service can provide filters for the data API
 * Frontend Data: The front-end of this service is responsible for displaying all information regarding the data. Selection criteria will be communicated from another service.
 * Frontend Filter: Provides a select to load and present the data
 * Shell: This is the host service which contains the Data and Filter frontends
+* Employee library: Contains most of the employee related frontend logic
+* Shares libraries: Common components, stores and interfaces
 
 ## :camera: Screenshots
 
@@ -54,7 +56,7 @@ Nx monorepo with react based micro-frontend applications with express API
 ## :clipboard: Status
 
 * Status: Working.
-* To-Do: test Tailwind CSS purge for build, change datafile,
+* To-Do: Create more tests and organize files better
 
 ## :clap: Inspiration
 

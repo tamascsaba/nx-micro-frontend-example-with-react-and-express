@@ -1,6 +1,6 @@
 import './app.module.scss';
 
-import {EmployeeSelect} from '@lib/shared-components';
+import {EmployeeSelect} from '@lib/employee-components';
 
 export default function App() {
   return (

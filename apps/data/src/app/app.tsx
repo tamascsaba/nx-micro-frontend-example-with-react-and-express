@@ -1,4 +1,4 @@
-import {EmployeeData} from '@lib/shared-components';
+import {EmployeeData} from '@lib/employee-components';
 
 export function App() {
   return (

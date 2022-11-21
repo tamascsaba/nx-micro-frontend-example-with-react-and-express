@@ -1,8 +1,8 @@
 import styles from './employee-select.module.scss';
 import {useEffect, useState} from 'react';
 
-import Spinner from '../spinner/spinner';
 import {selectedEmployee} from '@lib/shared-stores';
+import {Spinner} from '@lib/shared-components';
 
 async function getEmployees() {
   const res = await fetch('http://localhost:3002/api/employees');

@@ -7,8 +7,7 @@ import * as express from 'express';
 import * as path from 'path';
 import * as cors from 'cors';
 
-import {Employee} from '@lib/shared-interfaces';
-
+import {Employee} from '@lib/employee-interfaces';
 import {gaelSmithyResponse} from './app/gael-smithy.response';
 import {bobSmithResponse} from './app/bob-smith.response';
 
